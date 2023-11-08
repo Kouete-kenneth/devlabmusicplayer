@@ -1,0 +1,33 @@
+{
+  "name": "playerserver",
+  "version": "1.0.0",
+  "description": "music player web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kouete-kenneth/devlabmusicplayer.git"
+  },
+  "keywords": [
+    "music",
+    "streaming",
+    "spotify",
+    "sqlite",
+    "web",
+    "development"
+  ],
+  "author": "kenneth_and_devlab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kouete-kenneth/devlabmusicplayer/issues"
+  },
+  "homepage": "https://github.com/Kouete-kenneth/devlabmusicplayer#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  }
+}
