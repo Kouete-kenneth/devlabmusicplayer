@@ -1,3 +1,8 @@
 /node_modules
 .env
 .vercel
+server.js
+app.js
+converter.js
+index.js
+MusicDB.db
