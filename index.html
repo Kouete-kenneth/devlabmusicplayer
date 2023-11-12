@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+  </head>
+  <body>
+    <label for="searchInput">search Music</label>
+    <input type="text" id="searchInput" />
+    <button onclick="search()">Search</button>
+    <div id="player"></div>
+
+    <script>
+      function search() {
+        const searchInput = document.getElementById('searchInput').value;
+        fetch(`/search?q=${searchInput}`)
+          .then((response) => response.text())
+          .then((videoId) => {
+            const playerDiv = document.getElementById('player');
+            playerDiv.innerHTML = `<iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/${videoId}"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>`;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+    </script>
+  </body>
+</html>

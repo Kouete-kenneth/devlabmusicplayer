@@ -5,7 +5,7 @@ const database = require('../models/database');
 exports.signup = (req, res) => {
   // Retrieve user data from request body
   const { email, password } = req.body;
-
+  console.log("this is the request body: ",req.body);
   // Save user data to the database
   database.saveUser(email, password, (err) => {
     if (err) {
